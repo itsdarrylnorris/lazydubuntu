@@ -43,14 +43,9 @@ sudo echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 # Enable mode_rewrite for clean urls.
 sudo a2enmod rewrite
 
-# For single server configuration you want to do this.
+#  TODO For single server configuration you want to do this.
 # Find <Directory /var/www/html> and replace it with <Directory /var/www/>
 # In file apache2.conf and 000-default.conf
-
-WWW='<Directory /var/www/html>'
-OLDSCHOOL='<Directory /var/www'
-cat textfile.txt | /bin/sed -i -e 's/$WWW/$OLDSCHOOL/g' ~/Desktop/textfile.txt
-
 
 # Modify Apache so it can rewrite.
 lineNumber="$( /bin/grep -n "/var/www/" /etc/apache2/apache2.conf | /usr/bin/head -1 | cut -d ":" -f 1 )"
@@ -101,8 +96,6 @@ sudo echo "Icon=/opt/smartgithg-6_0_7/bin/smartgithg-128.png" >> /usr/share/appl
 sudo echo "Type=Application" >> /usr/share/applications/smartgit.desktop
 sudo echo "StartupNotify=true" >> /usr/share/applications/smartgit.desktop
 sudo echo "Categories=GIT;Development;Utility;" >> /usr/share/applications/smartgit.desktop
-
-
 
 # Install Curl
 sudo apt-get update
@@ -177,3 +170,51 @@ sudo apm install atom-beautifier
 # Install Nano (Terminal Editor)
 sudo apt-get update
 sudo apt-get install nano
+
+
+# Lazy Aliases
+
+cd ~/
+touch .bash_aliases
+chmod 644 .bash_aliases
+
+sudo echo "# Manage packages" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "alias agi='sudo apt-get install'" >> ~/.bash_aliases
+sudo echo "alias agr='sudo apt-get remove'" >> ~/.bash_aliases
+sudo echo "alias agu='sudo apt-get update'" >> ~/.bash_aliases
+sudo echo "alias acs='apt-cache search'" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "# Manage files and folders" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "alias cp='cp -iv'" >> ~/.bash_aliases
+sudo echo "alias mv='mv -iv'" >> ~/.bash_aliases
+sudo echo "alias rm='rm -i'" >> ~/.bash_aliases
+sudo echo "alias la='ls -alh'" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "# Navigating the system" >> ~/.bash_aliases
+sudo echo "alias documents='cd ~/Documents'" >> ~/.bash_aliases
+sudo echo "alias downloads='cd ~/Downloads'" >> ~/.bash_aliases
+sudo echo "alias desktop='cd ~/Desktop'" >> ~/.bash_aliases
+sudo echo "alias music='cd ~/Music'" >> ~/.bash_aliases
+sudo echo "alias videos='cd ~/Videos'" >> ~/.bash_aliases
+sudo echo "alias ..='cd ..'" >> ~/.bash_aliases
+sudo echo "alias ...='cd ../..'" >> ~/.bash_aliases
+sudo echo "alias ....='cd ../../..'" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "# Other useful aliases" >> ~/.bash_aliases
+sudo echo "alias e='exit'" >> ~/.bash_aliases
+sudo echo "alias s='sudo'" >> ~/.bash_aliases
+sudo echo "alias shutdown='sudo shutdown -h now'" >> ~/.bash_aliases
+sudo echo "alias restart='sudo shutdown -r now'" >> ~/.bash_aliases
+sudo echo "alias suspend='sudo pm-suspend'" >> ~/.bash_aliases
+sudo echo "alias mounted='mount | column -t'" >> ~/.bash_aliases
+sudo echo "# Git Aliases" >> ~/.bash_aliases
+sudo echo " " >> ~/.bash_aliases
+sudo echo "alias gs='git status '" >> ~/.bash_aliases
+sudo echo "alias ga='git add '" >> ~/.bash_aliases
+sudo echo "alias gb='git branch '" >> ~/.bash_aliases
+sudo echo "alias gc='git commit'" >> ~/.bash_aliases
+sudo echo "alias gd='git diff'" >> ~/.bash_aliases
+sudo echo "alias go='git checkout '" >> ~/.bash_aliases
+sudo echo "alias gcm='git commit -m" >> ~/.bash_aliases
