@@ -36,11 +36,12 @@ We are asssuming that you have a clean installation of Ubuntu 14.04. Because thi
 
 ### Terminal Way
 
-  
+  <pre>
   wget https://github.com/darol100/lazydubuntu/archive/master.zip # Download Lazy Dubuntu
   unzip master.zip  # Extract
-  cd lazydubuntu-master  
+  cd lazydubuntu-master
   sudo bash lazydubuntu.sh  # Run the shell script
+  </pre>
 
 
 
