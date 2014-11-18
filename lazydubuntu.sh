@@ -154,10 +154,6 @@ sudo apm install change-case
 # linter Validates your code using linters
 sudo apm install linter
 
-# markdown-preview Open a rendered version of the
-# Markdown in the current editor with `ctrl-shift-m'
-sudo apm install markdown-preview
-
 # atom-html-preview A live preview tool for Atom Editor.
 sudo apm install atom-html-preview
 
