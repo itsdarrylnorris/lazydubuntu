@@ -57,7 +57,7 @@ sudo service apache2 restart
 
 # Install git
 sudo apt-get update
-sudo apt-get install git
+sudo apt-get install git -y
 
 # Git Configuration
 # To learn more about git configuration:
