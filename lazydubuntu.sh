@@ -99,7 +99,7 @@ sudo echo "Categories=GIT;Development;Utility;" >> /usr/share/applications/smart
 
 # Install Curl
 sudo apt-get update
-sudo apt-get install curl
+sudo apt-get install curl -y
 
 # Install Composer
 sudo curl -sS https://getcomposer.org/installer | php​
