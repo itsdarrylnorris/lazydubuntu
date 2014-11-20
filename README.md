@@ -32,7 +32,7 @@ for you development Drupal environment. We configuration and documentation for y
 ## Installation
 ### Before the installation
 
-We are asssuming that you have a clean installation of Ubuntu 14.04. Because this shell script is going to install a lot different packages and if your OS already have some packages with configuration it might be lost. This shell script it can be install either on a computer or/and virtual machine.
+We are asssuming that you have a clean installation of Ubuntu 14.04. Because this shell script is going to install a lot different packages and if your OS already have some packages with configuration it might be lost. This shell script it can be install either on a computer and/or virtual machine.
 
 ### Terminal Way
 
