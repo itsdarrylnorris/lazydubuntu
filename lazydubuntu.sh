@@ -102,7 +102,7 @@ sudo apt-get update
 sudo apt-get install curl -y
 
 # Install Composer
-sudo curl -sS https://getcomposer.org/installer | php​
+php -r "readfile('https://getcomposer.org/installer');" | php
 
 # Access composer from anywhere on your system:
 sudo mv composer.phar /usr/local/bin/composer
