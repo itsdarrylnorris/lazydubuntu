@@ -117,9 +117,9 @@ cd ~/
 ln -s /usr/share/drush/drush /usr/bin/drush
 
 # Install Atom (GUI Text Editor)
-sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository ppa:webupd8team/atom -y 
 sudo apt-get update
-sudo apt-get install atom
+sudo apt-get install atom -y
 
 # Installing Packages for Atom .
 # Drupal Packages:
@@ -220,9 +220,9 @@ sudo echo "alias gcm='git commit -m'" >> ~/.bash_aliases
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo apt-get update
-sudo apt-get install google-chrome-stable
+sudo apt-get install google-chrome-stable -y
 
 # Firefox For Developers
-sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
+sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora -y
 sudo apt-get update
-sudo apt-get install firefox
+sudo apt-get install firefox -y
