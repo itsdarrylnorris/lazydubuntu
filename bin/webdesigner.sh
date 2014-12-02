@@ -16,7 +16,7 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install nodejs -y
 
 # Building Essential
-sudo apt-get install build-essential
+sudo apt-get install build-essential -y 
 
 # Grunt CLI Globally 
 sudo npm install -g grunt-cli -y
