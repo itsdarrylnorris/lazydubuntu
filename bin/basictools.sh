@@ -116,3 +116,20 @@ sudo apm install bootstrap-3-snippetset
 # Install Nano (Terminal Editor)
 sudo apt-get update
 sudo apt-get install nano
+
+# Installing Fizella 
+
+sudo apt-get update
+sudo apt-get install filezilla -y
+
+# Installing OpenSSH Client 
+sudo apt-get update
+sudo apt-get install openssh-client -y
+
+
+# Installing OpenSSH Server
+sudo apt-get update
+sudo apt-get install openssh-server -y
+
+
+
