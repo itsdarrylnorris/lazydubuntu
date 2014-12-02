@@ -1,10 +1,3 @@
-# Install phpMyAdmin
-sudo apt-get update
-sudo apt-get install phpmyadmin -y
-
-# Originals Files
-sudo mkdir ~/LazyDubuntu/originals/
-
 # Install git
 sudo apt-get update
 sudo apt-get install git -y
