@@ -1,3 +1,4 @@
+#!/bin/bash
 # Installing Broswer Firefox for Developer & Google Chrome
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
