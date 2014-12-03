@@ -1,3 +1,4 @@
+#!/bin/bash
 # LampStack
 # This shell script is going to contain Apache2 MySQL and PHP5.
 
