@@ -45,3 +45,7 @@ sudo echo "alias gc='git commit'" >> ~/.bash_aliases
 sudo echo "alias gd='git diff'" >> ~/.bash_aliases
 sudo echo "alias go='git checkout '" >> ~/.bash_aliases
 sudo echo "alias gcm='git commit -m'" >> ~/.bash_aliases
+
+# Reload Aliases
+source ~/.bash_aliases 
+
