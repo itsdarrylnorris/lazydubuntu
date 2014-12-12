@@ -100,6 +100,9 @@ echo ---------------------------------------------------------------------------
 echo
 read -p "Enter Your Gmail Username: " GmailUser
 
+# Making the Gmail Username avaible across all the scripts
+export GmailUser
+
 # Asking for password and a confirmation.
 while true
 do

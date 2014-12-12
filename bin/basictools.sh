@@ -13,8 +13,9 @@ sudo apt-get install ssmtp -y
 sudo sed -i -e "s/root=postmaster/root=$PostMaster/g" $SsmtpConfig
 sudo sed -i -e "s/mailhub=mail/mailhub=$SsmtpGmail/g" $SsmtpConfig
 sudo sed -i -e "s/hostname=username@gmail.com/$PostMaster/g" $SsmtpConfig
-sudo sed -i -e "s/AuthUser=username/AuthUser=$GmailUser/g" $SsmtpConfig
 sudo sed -i -e "s/#FromLineOverride=YES/FromLineOverride=YES/g" $SsmtpConfig
+
+# TODO AuthUser Not working variable
 sudo echo "AuthUser=$GmailUser" >> $SsmtpConfig
 sudo echo "AuthPass=$GmailPassword" >> $SsmtpConfig
 sudo echo "UseSTARTTLS=YES" >> $SsmtpConfig
