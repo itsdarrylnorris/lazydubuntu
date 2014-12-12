@@ -36,5 +36,5 @@ if [ "$1" != '' ]; then
 elif [ "$1" = 'help' ] || [ "$1" = '' ]; then
   echo "usage:"
   echo "sudo delwebsite <hostname>"
-  echo "example: to delete hostname.localhost just run the command 'sudo delwebsite hostname.localhost'"
+  echo "Example: to delete hostname just run the command 'sudo delwebsite hostname'"
 fi

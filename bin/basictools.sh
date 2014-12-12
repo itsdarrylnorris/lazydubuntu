@@ -34,7 +34,7 @@ git config --global user.email $GitEmail
 
 
 # Install Git Cola
-sudo apt-get install git-cola
+sudo apt-get install git-cola -y
 
 # Install Curl
 sudo apt-get update
