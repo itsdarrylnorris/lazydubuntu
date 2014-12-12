@@ -1,0 +1,37 @@
+a675032 (HEAD, master) Change Permission
+3a86eeb Removing Grunt and Yeoman installation due to the issue https://github.com/darol100/lazydubuntu/issues/2#issuecomment-65826486
+ff7a64a Adding Variable to the lazy aliases
+7f6d226 Adding SSMTP and configuration, Replacing Smartgit with Git-cola. Because Git-cola its a open source and it can be easly update with apt-get.
+1305808 Adding the Virtual Host to the script and automation with the MYSQL & phpMyadmin credentials.
+6bdc1ff Virtual Host Support: Fixes #1 and this files will allow to generated a virtual host and delete them.
+3d2979d This will ask for credentials for the following packagaes: MYSQL, phpMyAdmin, Git, SSMTP.
+539edf2 Apache License
+f4ed68f (origin/master, origin/HEAD) Addining #!/bin/bash
+b15612b Addining #!/bin/bash
+b2b9ba1 Addining #!/bin/bash
+00c5d2d Addining #!/bin/bash
+d516fe9 Addining #!/bin/bash
+1a8b605 Update basictools.sh
+670b1b2 Update lampstack.sh
+9b3fae9 Automate Build Essential
+9a10d28 FTP, SSH Client & Server
+6a6feb9 New Features (Grunt, NodeJs and Yeoman)
+c307b4e Remove To DO list
+d843508 This fixes #11 separation of files. In addition, I have remove sudo apm install atom-beautifier because it was not installing correctly.
+97d3cce Composer Installer
+2a34197 Automate Atom, Google Chrome and Firefox .
+47b654f Developer Broswers
+a5cb19a Merge pull request #10 from DrTrills/patch-1
+5b4fc64 Update README.md
+521eb08 Fixing syntax error
+873b318 Remove Markdown Preview
+25c5d3f Automate Installation of Curl
+07fceae Automate Installation of Git
+b906471 Update README.md
+be07a31 Updated README.md
+446299e Updated README.md
+a1cea2f Lazy Aliases
+4f338c9 Atom Packages for web development and Drupal, Git Configuration, Installation of SmartGit, Backup files, TODO List Markdown and README.md description.
+c7fa390 First Commit - Automation Drupal Development enviroment.
+a22069c Update README.md
+1092267 Initial commit
