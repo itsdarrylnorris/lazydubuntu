@@ -1,0 +1,40 @@
+#!/bin/bash
+
+WEBROOT="/var/www/"
+VHOSTDIR="/etc/apache2/sites-available/"
+VHOSTDIRENABLE="/etc/apache2/sites-enable/"
+EXTENSION=".dev"
+RESTARTCMD="/usr/bin/sudo service apache2 reload"
+LOGDIR="/var/log/apache2/"
+
+if [ "$1" != '' ]; then
+  sudo a2dissite $1$EXTENSION.conf
+  if [ -f "$VHOSTDIR$1$EXTENSION.conf" ]; then
+    sudo rm "$VHOSTDIR$1$EXTENSION.conf"
+    echo "deleted $VHOSTDIR$1$EXTENSION.conf"
+    sudo sed -i "/$1$EXTENSION/d" /etc/hosts
+    echo "Remove ip address from the hosts"
+
+  fi
+
+  if [ -d "$WEBROOT$1/" ]; then
+    sudo rm -rf "$WEBROOT$1/"
+    echo "deleted $WEBROOT$1/"
+  else
+    echo "$WEBROOT$1/ does not exist"
+  fi
+  if [ -f "$LOGDIR$1_access.log" ]; then
+    sudo rm "$LOGDIR$1_access.log"
+    echo "deleted $LOGDIR$1_access.log"
+  fi
+  if [ -f "$LOGDIR$1_error.log" ]; then
+    sudo rm "$LOGDIR$1_error.log"
+    echo "deleted $LOGDIR$1_error.log"
+  fi
+  $RESTARTCMD
+  echo "reloaded apache"
+elif [ "$1" = 'help' ] || [ "$1" = '' ]; then
+  echo "usage:"
+  echo "sudo delwebsite <hostname>"
+  echo "example: to delete hostname.localhost just run the command 'sudo delwebsite hostname.localhost'"
+fi
