@@ -16,14 +16,16 @@ sudo apt-get update -y
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install nodejs -y
 
+
+# TODO Grunt Issue https://github.com/darol100/lazydubuntu/issues/2#issuecomment-65826486
 # Building Essential
-sudo apt-get install build-essential -y 
+#sudo apt-get install build-essential -y
+# Grunt CLI Globally
+#sudo npm install -g grunt-cli -y
+# Installing Grunt
+# sudo npm install grunt -y
 
-# Grunt CLI Globally 
-sudo npm install -g grunt-cli -y
 
-# Installing Grunt 
-sudo npm install grunt -y
-
+# Yeoman needs Grunt
 # Installing Yeoman
-sudo npm install -g yo -y
+# sudo npm install -g yo -y
