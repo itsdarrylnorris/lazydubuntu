@@ -1,46 +1,40 @@
 #!/bin/bash
 
+# Variables
+
+SsmtpGmail="smtp.gmail.com:587"
+SsmtpConfig="/etc/ssmtp/ssmtp.conf"
+
+# Install SSMTP
+sudo apt-get update
+sudo apt-get install ssmtp -y
+
+# Configure SSMTP http://www.nixtutor.com/linux/send-mail-with-gmail-and-ssmtp/
+sudo sed -i -e "s/root=postmaster/root=$PostMaster/g" $SsmtpConfig
+sudo sed -i -e "s/mailhub=mail/mailhub=$SsmtpGmail/g" $SsmtpConfig
+sudo sed -i -e "s/hostname=username@gmail.com/$PostMaster/g" $SsmtpConfig
+sudo sed -i -e "s/AuthUser=username/AuthUser=$GmailUser/g" $SsmtpConfig
+sudo sed -i -e "s/#FromLineOverride=YES/FromLineOverride=YES/g" $SsmtpConfig
+sudo echo "AuthUser=$GmailUser" >> $SsmtpConfig
+sudo echo "AuthPass=$GmailPassword" >> $SsmtpConfig
+sudo echo "UseSTARTTLS=YES" >> $SsmtpConfig
+
+# Then add each account that you want to be able to send mail from by editing,
+# ‘/etc/ssmtp/revaliases‘:
+sudo echo "root:$PostMaster:$SsmtpGmail" >> /etc/ssmtp/revaliases
+sudo echo "localusername:$PostMaster:$SsmtpGmail" >> /etc/ssmtp/revaliases
+
 # Install git
 sudo apt-get update
 sudo apt-get install git -y
 
-# Git Configuration
-# To learn more about git configuration:
-# http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
-echo
-echo ---------------------------------------------
-echo Git required to add your full-name and e-mail.
-echo This will set-up the  --global user.name and --global user.email
-echo ---------------------------------------------
-echo
-read -p "Enter Your Full Name: " FullName
-read -p "Enter Your E-mail: " Email
-
 # Setting Up Git
-git config --global user.name "$FullName"
-git config --global user.email $Email
+git config --global user.name "$GitFullName"
+git config --global user.email $GitEmail
 
-# SmartGit
-# Downloading a GUI git client
-sudo wget http://www.syntevo.com/download/smartgithg/smartgithg-generic-6_0_7.tar.gz
 
-# Extracting
-sudo tar -zxvf smartgithg-generic-6_0_7.tar.gz
-sudo rm smartgithg-generic-6_0_7.tar.gz
-# Moving to /opt directory
-sudo mv smartgithg-6_0_7 /opt/
-# Creating a simbolic link so we an run this from the terminal
-sudo ln -s /opt/smartgithg-6_0_7/bin/smartgithg.sh /usr/bin/smartgit
-
-sudo touch /usr/share/applications/smartgit.desktop
-
-sudo echo "Name=SmartGit" >> /usr/share/applications/smartgit.desktop
-sudo echo "Comment=GUI git client" >> /usr/share/applications/smartgit.desktop
-sudo echo "Exec=/opt/smartgithg-6_0_7/bin/smartgithg.sh" >> /usr/share/applications/smartgit.desktop
-sudo echo "Icon=/opt/smartgithg-6_0_7/bin/smartgithg-128.png" >> /usr/share/applications/smartgit.desktop
-sudo echo "Type=Application" >> /usr/share/applications/smartgit.desktop
-sudo echo "StartupNotify=true" >> /usr/share/applications/smartgit.desktop
-sudo echo "Categories=GIT;Development;Utility;" >> /usr/share/applications/smartgit.desktop
+# Install Git Cola
+sudo apt-get install git-cola
 
 # Install Curl
 sudo apt-get update
@@ -71,8 +65,10 @@ sudo apt-get install atom -y
 
 # language-drupal (http://drupal.org) syntax highlighting and snippets for Atom.
 sudo apm install language-drupal
+
 # drupal Drupal snippets, filetypes and hotkeys
 sudo apm install drupal
+
 # drupal-info-file Drupal info file syntax
 sudo apm install drupal-info-file
 
@@ -105,26 +101,18 @@ sudo apm install atom-html-preview
 # bootstrap-3-snippetset A 'Twitter Bootstrap 3' snippetset.
 sudo apm install bootstrap-3-snippetset
 
-# atom-beautifier Beautifier for Atom
-# sudo apm install atom-beautifier
-
 # Install Nano (Terminal Editor)
 sudo apt-get update
 sudo apt-get install nano
 
-# Installing Fizella 
-
+# Installing Filezilla
 sudo apt-get update
 sudo apt-get install filezilla -y
 
-# Installing OpenSSH Client 
+# Installing OpenSSH Client
 sudo apt-get update
 sudo apt-get install openssh-client -y
-
 
 # Installing OpenSSH Server
 sudo apt-get update
 sudo apt-get install openssh-server -y
-
-
-
