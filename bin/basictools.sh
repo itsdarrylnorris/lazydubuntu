@@ -117,3 +117,7 @@ sudo apt-get install openssh-client -y
 # Installing OpenSSH Server
 sudo apt-get update
 sudo apt-get install openssh-server -y
+
+# Installing PHP cURL
+sudo apt-get install php5-curl -y
+
