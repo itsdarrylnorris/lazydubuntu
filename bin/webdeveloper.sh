@@ -1,2 +1,4 @@
 #!/bin/bash 
-echo "Coming Soon"
+
+# Installing MySQL Workbench 
+sudo apt-get install mysql-workbench
