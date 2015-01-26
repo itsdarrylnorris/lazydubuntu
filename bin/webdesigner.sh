@@ -11,21 +11,12 @@ sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora -y
 sudo apt-get update
 sudo apt-get install firefox -y
 
-# Installing NodeJs
-sudo apt-get update -y
-curl -sL https://deb.nodesource.com/setup | sudo bash -
+
+sudo apt -qq -y install  software-properties-common -y
+sudo apt-add-repository -y ppa:chris-lea/node.js 
 sudo apt-get install nodejs -y
 
-
-# TODO Grunt Issue https://github.com/darol100/lazydubuntu/issues/2#issuecomment-65826486
-# Building Essential
-#sudo apt-get install build-essential -y
-# Grunt CLI Globally
-#sudo npm install -g grunt-cli -y
-# Installing Grunt
-# sudo npm install grunt -y
-
-
-# Yeoman needs Grunt
-# Installing Yeoman
-# sudo npm install -g yo -y
+#Install Ruby
+sudo apt-get install ruby
+# Then I installed SASS
+gem install sass 
