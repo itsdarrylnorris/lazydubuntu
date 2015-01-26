@@ -12,11 +12,18 @@ sudo apt-get update
 sudo apt-get install firefox -y
 
 
+# Installing NodeJS
 sudo apt -qq -y install  software-properties-common -y
 sudo apt-add-repository -y ppa:chris-lea/node.js 
 sudo apt-get install nodejs -y
 
-#Install Ruby
+#Installing Ruby
 sudo apt-get install ruby
-# Then I installed SASS
+
+# Installing SASS
+gem update --system
 gem install sass 
+
+# Installing Compass
+gem update --system
+gem install compass
