@@ -18,7 +18,7 @@ sudo apt-add-repository -y ppa:chris-lea/node.js
 sudo apt-get install nodejs -y
 
 #Installing Ruby
-sudo apt-get install ruby
+sudo apt-get install ruby -y
 
 # Installing SASS
 gem update --system
